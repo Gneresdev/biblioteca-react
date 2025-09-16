@@ -2,6 +2,8 @@
 # 📚 Biblioteca Online - Frontend
 Este é o frontend de uma aplicação de biblioteca/sebo online, desenvolvida como um projeto pessoal para praticar e aprofundar minhas habilidades em desenvolvimento web moderno.
 
+![Demo do Projeto](assets/sebo.gif)
+
 ### ✨ Features
 - Páginas Temáticas: Interface para listagem do acervo de livros e para adicionar novos títulos.
 
