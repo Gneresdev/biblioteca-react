@@ -1,15 +1,15 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "./pages/home"; // cuidado com o nome: H maiúsculo!
-import './index.css'; // importa o Tailwind (se estiver aqui)
+import Home from "./pages/home";
+import Acervo from "./pages/Acervo";
+import VenderLivro from "./pages/VenderLivro";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Adicione outras rotas aqui no futuro, tipo /livros, /sobre etc */}
+        <Route path="/acervo" element={<Acervo />} />
+        <Route path="/vender" element={<VenderLivro />} />
       </Routes>
     </Router>
   );
