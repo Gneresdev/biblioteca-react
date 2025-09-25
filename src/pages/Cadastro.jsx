@@ -1,25 +1,30 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       // Substitua a URL pela sua rota de cadastro
-      const response = await axios.post("http://localhost:3000/api/usuarios", {
-        nome,
-        email,
-        senha,
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/usuarios/cadastro",
+        {
+          nome,
+          email,
+          senha,
+        }
+      );
       console.log("Cadastro realizado com sucesso:", response.data);
       alert("Cadastro realizado com sucesso!");
-      // Redirecionar para a página de login após o cadastro
+      navigate("/login"); // Redirecionar para a página de login após o cadastro
     } catch (error) {
       console.error("Erro ao cadastrar:", error);
       alert("Erro ao realizar o cadastro. Tente novamente.");
